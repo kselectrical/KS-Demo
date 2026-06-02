@@ -37,7 +37,7 @@ export default function BookingForm({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const { name, phone, serviceId, problem } = formData;
+    const { name, phone, serviceId, problem, date, timeSlot, address } = formData;
 
     if (!name.trim()) {
       setError("कृपया अपना नाम लिखें।");
@@ -60,7 +60,7 @@ export default function BookingForm({
 
     // Get Service Title
     const selectedService = SERVICES_DATA.find((s) => s.id === serviceId);
-    const serviceName = selectedService ? selectedService.title : formData.serviceId;
+    const serviceName = selectedService ? selectedService.title : serviceId;
 
     // Simulate booking save trigger
     setTimeout(() => {
@@ -89,9 +89,9 @@ export default function BookingForm({
 📞 *फ़ोन नंबर:* ${phone.trim()}
 🛠️ *ज़रूरी सर्विस:* ${serviceName}
 💬 *समस्या (Problem):* ${problem.trim() || "-"}
-📅 *दिनांक (Date):* ${formData.date || "जल्द से जल्द (As soon as possible)"}
-⏰ *समय (Time Slot):* ${formData.timeSlot || "किसी भी समय"}
-📍 *पता (Address):* ${formData.address?.trim() || "-"}
+📅 *दिनांक (Date):* ${date || "जल्द से जल्द (As soon as possible)"}
+⏰ *समय (Time Slot):* ${timeSlot || "किसी भी समय"}
+📍 *पता (Address):* ${address?.trim() || "-"}
 ----------------------------------------------
 कृपया इस बुकिंग की पुष्टि करें और टेक्नीशियन भेजें। धन्यवाद!`;
 

@@ -93,7 +93,7 @@ export default function AdvancedSearchBar({ onServiceSelect }: AdvancedSearchBar
       // 4. Match common problems
       service.problems.forEach((p) => {
         const probMatch = p.problem.toLowerCase().includes(q);
-        const probHindiMatch = p.solutionHindi?.includes(q) || p.problem.includes(q);
+        const probHindiMatch = p.solutionHindi?.toLowerCase().includes(q) || false;
         if (probMatch || probHindiMatch) {
           score += 30;
           if (matchedType !== "title" && matchedType !== "pricing" && matchedType !== "feature") {

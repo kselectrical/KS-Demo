@@ -43,7 +43,7 @@ export default function SafeImage({
       fallbacks.push(`kselectrical1/${cleanPath}`);
     }
 
-    const baseWithoutExt = cleanPath.replace(/\.(png|jpg|jpeg|webp|pmg|PNG|JPG|JPEG|WEBP)$/i, "");
+    const baseWithoutExt = cleanPath.replace(/\.(png|jpg|jpeg|webp|png|PNG|JPG|JPEG|WEBP)$/i, "");
     const ext = src.split('.').pop() || 'png';
     const extensions = ["png", "jpg", "jpeg", "webp", "PNG", "JPG", "JPEG", "WEBP"];
 

@@ -25,7 +25,7 @@ export default function Footer({
     } else if (logoSrc === "/kselectrical1/images/logo.png") {
       setLogoSrc("/kselectrical1/images/log.png.png");
     } else if (logoSrc === "/kselectrical1/images/log.png.png") {
-      setLogoSrc("/images/logo.png");
+      setLogoSrc("/images/log.png");
     } else {
       setUseFallbackLogo(true);
     }

@@ -36,9 +36,10 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Parse serviceId from location path /service/:id
+  // Parse serviceId from location path /service/:id and validate it
   const serviceMatch = location.pathname.match(/^\/service\/([^/]+)/);
-  const currentServiceId = serviceMatch ? serviceMatch[1] : null;
+  const matchedServiceId = serviceMatch ? serviceMatch[1] : null;
+  const currentServiceId = (matchedServiceId && SERVICES_DATA.some((s) => s.id === matchedServiceId)) ? matchedServiceId : null;
 
   const [activeSection, setActiveSection] = useState("home");
   const [testiIndex, setTestiIndex] = useState(0);
