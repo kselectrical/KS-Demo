@@ -575,7 +575,7 @@ export default function App() {
                 {/* OWNER DETAILS CARD */}
                 <div className="p-6 bg-stone-900 border border-[rgba(249,115,22,0.15)] rounded-2xl flex items-center gap-5 hover:border-[#f97316]/50 transition-colors">
                   <SafeImage
-                    src="/kselectrical1/images/profile.png.png"
+                    src="/kselectrical1/images/profile.png"
                     alt={OWNER_INFO.englishName}
                     className="w-16 h-16 rounded-full object-cover border-2 border-orange-500/40 shadow-lg animate-[fadeIn_0.5s_ease-out]"
                     referrerPolicy="no-referrer"

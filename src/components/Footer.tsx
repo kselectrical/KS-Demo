@@ -16,13 +16,15 @@ export default function Footer({
   currentServiceId,
   onBackToHome,
 }: FooterProps) {
-  const [logoSrc, setLogoSrc] = useState("/kselectrical1/images/log.png.png");
+  const [logoSrc, setLogoSrc] = useState("/kselectrical1/images/log.png");
   const [useFallbackLogo, setUseFallbackLogo] = useState(false);
 
   const handleLogoError = () => {
-    if (logoSrc === "/kselectrical1/images/log.png.png") {
+    if (logoSrc === "/kselectrical1/images/log.png") {
       setLogoSrc("/kselectrical1/images/logo.png");
     } else if (logoSrc === "/kselectrical1/images/logo.png") {
+      setLogoSrc("/kselectrical1/images/log.png.png");
+    } else if (logoSrc === "/kselectrical1/images/log.png.png") {
       setLogoSrc("/images/logo.png");
     } else {
       setUseFallbackLogo(true);
