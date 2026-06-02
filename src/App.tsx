@@ -31,6 +31,7 @@ import BookingForm from "./components/BookingForm";
 import GallerySection from "./components/GallerySection";
 import Footer from "./components/Footer";
 import SafeImage from "./components/SafeImage";
+import AiAssistant from "./components/AiAssistant";
 
 export default function App() {
   const navigate = useNavigate();
@@ -706,6 +707,9 @@ export default function App() {
       >
         <MessageSquare className="w-6 h-6 fill-white text-white" />
       </a>
+
+      {/* AI CHAT ASSISTANT */}
+      <AiAssistant />
 
       {/* MASTER FOOTER */}
       <Footer
