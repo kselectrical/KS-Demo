@@ -1,0 +1,6 @@
+{
+  "name": "KS Electrical & AC Service",
+  "description": "Expert repair & service for AC, RO Water Purifier, Washing Machine, Geyser, and Electrical work inside Gaur City, Noida Extension, and Ghaziabad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
